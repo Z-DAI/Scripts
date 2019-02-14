@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # ***************************************************************
 # Name:      remove_duplicated_seqs.py
-# Purpose:   This script removes duplicated sequences in fasta files
-#            according to sequence (rather than header), and outputs
-#            the duplicated sequences with the matching sequence IDs
-#            in deduplicated sequence file.
+# Purpose:   This script generates one file containing
+#            deduplicated sequences according to sequence
+#            (rather than header), and the other file containing
+#            duplicated sequences with comma joined sequence IDs.
 # Ref: https://biopython.org/wiki/Sequence_Cleaner
 # Dependencies:
 #            Biopython is installed
@@ -24,7 +24,7 @@ with warnings.catch_warnings():
     from Bio import SeqIO
 
 def parse_args():
-	parser = argparse.ArgumentParser(description = '%(prog)s removes duplicated sequences in fasta files according to sequence (rather than header), and outputs the duplicated sequences with the matching sequence IDs in deduplicated sequence file.')
+	parser = argparse.ArgumentParser(description = '%(prog)s generates one file containing deduplicated sequences according to sequence (rather than header), and the other file containing duplicated sequences with comma joined sequence IDs.')
 	parser.add_argument('-i', '--input-file', dest='fasta_file', help = 'input fasta file', required = True)
 	return parser.parse_args()
 

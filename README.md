@@ -6,8 +6,7 @@
 
     usage: remove_duplicated_seqs.py [-h] -i FASTA_FILE
 
-    remove_duplicated_seqs.py removes duplicated sequences in fasta files according to sequence (rather than header), and outputs the duplicated
-    sequences with the matching sequence IDs in deduplicated sequence file.
+    remove_duplicated_seqs.py generates one file containing deduplicated sequences according to sequence (rather than header), and the other file containing duplicated sequences with comma-joined sequence IDs.
 
     optional arguments:
       -h, --help            show this help message and exit
